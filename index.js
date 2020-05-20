@@ -38,7 +38,6 @@ function createReadStream(path, options) {
         close = function () {
           watching = false;
           watcher.close();
-          rs.close();
           if (!reading && synced) {
             ds.push(null);
           }
